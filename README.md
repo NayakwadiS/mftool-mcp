@@ -173,12 +173,10 @@ To list this on [modelcontextprotocol.io](https://modelcontextprotocol.io):
 
 ## License
 
-MIT © 2025 Your Name
+MIT © 2025 Sujit Nayakwadi
 
 ---
 
 ## Acknowledgements
 
 - [mftool](https://github.com/NayakwadiS/mftool) by NayakwadiS — the underlying data library
-- [AMFI India](https://www.amfiindia.com/) — the data source
-- [Anthropic MCP](https://modelcontextprotocol.io) — the protocol
