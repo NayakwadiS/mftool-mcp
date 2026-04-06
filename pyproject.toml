@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "MCP Server for real-time Indian Mutual Funds data"
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "SujitN", email = "your@email.com" }]
+authors = [{ name = "SujitN", email = "nayakwadi.sujit@rediffmail.com" }]
 keywords = [
     "mcp",
     "mutual-funds",
@@ -35,7 +35,7 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=1.0.0",
-    "mftool>=3.0",
+    "mftool>=3.2",
 ]
 
 [project.urls]

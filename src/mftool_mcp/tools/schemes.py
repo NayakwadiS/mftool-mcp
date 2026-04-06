@@ -3,10 +3,12 @@ Scheme discovery and search MCP tools wrapping mftool APIs.
 """
 
 from mftool import Mftool
+from mftool_mcp.mcp_instance import mcp
 
 _mf = Mftool()
 
 
+@mcp.tool()
 def get_scheme_codes() -> dict:
     """
     Get a dictionary of ALL mutual fund scheme codes and names available on AMFI.
@@ -25,6 +27,7 @@ def get_scheme_codes() -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_available_schemes(amc_name: str) -> dict:
     """
     Get all mutual fund schemes available under a specific AMC (Asset Management Company).
@@ -37,7 +40,7 @@ def get_available_schemes(amc_name: str) -> dict:
         Dictionary mapping scheme codes (str) to scheme names (str) for the given AMC.
     """
     try:
-        result = _mf.get_available_schemes(amc_name, as_json=False)
+        result = _mf.get_available_schemes(amc_name)
         if not result:
             return {"error": f"No schemes found for AMC: '{amc_name}'. Try a shorter keyword."}
         return result
@@ -45,6 +48,7 @@ def get_available_schemes(amc_name: str) -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def is_valid_scheme_code(scheme_code: str) -> dict:
     """
     Check whether a given scheme code is a valid AMFI scheme code.
@@ -56,12 +60,13 @@ def is_valid_scheme_code(scheme_code: str) -> dict:
         Dictionary with 'valid' (bool) and 'scheme_code' fields.
     """
     try:
-        result = _mf.is_valid_scheme(scheme_code)
+        result = _mf.is_valid_code(scheme_code)
         return {"scheme_code": scheme_code, "valid": bool(result)}
     except Exception as e:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def search_scheme_by_name(query: str, amc_name: str = "") -> dict:
     """
     Search for mutual fund schemes by name keyword. Optionally filter by AMC.
@@ -76,7 +81,7 @@ def search_scheme_by_name(query: str, amc_name: str = "") -> dict:
     """
     try:
         if amc_name:
-            all_schemes = _mf.get_available_schemes(amc_name, as_json=False)
+            all_schemes = _mf.get_available_schemes(amc_name)
         else:
             all_schemes = _mf.get_scheme_codes(as_json=False)
 

@@ -3,10 +3,12 @@ NAV-related MCP tools wrapping mftool APIs.
 """
 
 from mftool import Mftool
+from mftool_mcp.mcp_instance import mcp
 
 _mf = Mftool()
 
 
+@mcp.tool()
 def get_scheme_quote(scheme_code: str) -> dict:
     """
     Get the latest NAV (Net Asset Value) quote for a mutual fund scheme.
@@ -27,6 +29,7 @@ def get_scheme_quote(scheme_code: str) -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_scheme_details(scheme_code: str) -> dict:
     """
     Get detailed metadata for a mutual fund scheme including fund house,
@@ -48,6 +51,7 @@ def get_scheme_details(scheme_code: str) -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_scheme_historical_nav(scheme_code: str) -> dict:
     """
     Get the full historical NAV data for a mutual fund scheme (all available dates).
@@ -68,6 +72,7 @@ def get_scheme_historical_nav(scheme_code: str) -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_scheme_historical_nav_for_dates(
     scheme_code: str, start_date: str, end_date: str
 ) -> dict:

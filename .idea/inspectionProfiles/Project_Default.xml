@@ -1,0 +1,115 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="alembic" />
+          <option value="boto3" />
+          <option value="botocore" />
+          <option value="celery" />
+          <option value="click" />
+          <option value="click-didyoumean" />
+          <option value="click-plugins" />
+          <option value="click-repl" />
+          <option value="cryptography" />
+          <option value="flake8" />
+          <option value="Flask" />
+          <option value="flask-cors" />
+          <option value="Flask-Migrate" />
+          <option value="flask-restx" />
+          <option value="Flask-Script" />
+          <option value="Flask-SQLAlchemy" />
+          <option value="Flask-Testing" />
+          <option value="Jinja2" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="kombu" />
+          <option value="Mako" />
+          <option value="marshmallow-jsonapi" />
+          <option value="pandas" />
+          <option value="pyOpenSSL" />
+          <option value="pytest-aiohttp" />
+          <option value="pytest-asyncio" />
+          <option value="pytest-cov" />
+          <option value="pytest-mock" />
+          <option value="pytest-randomly" />
+          <option value="pytest-watch" />
+          <option value="s3transfer" />
+          <option value="snowflake-connector-python" />
+          <option value="snowflake-sqlalchemy" />
+          <option value="apscheduler" />
+          <option value="attrs" />
+          <option value="certifi" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="colorama" />
+          <option value="contourpy" />
+          <option value="cycler" />
+          <option value="filelock" />
+          <option value="fonttools" />
+          <option value="fsspec" />
+          <option value="idna" />
+          <option value="isodate" />
+          <option value="jinja2" />
+          <option value="kiwisolver" />
+          <option value="lxml" />
+          <option value="markupsafe" />
+          <option value="matplotlib" />
+          <option value="mpmath" />
+          <option value="msal" />
+          <option value="mtcnn-opencv" />
+          <option value="networkx" />
+          <option value="numpy" />
+          <option value="onvif-zeep" />
+          <option value="opencv-python" />
+          <option value="opencv-python-headless" />
+          <option value="packaging" />
+          <option value="pillow" />
+          <option value="platformdirs" />
+          <option value="psutil" />
+          <option value="py-cpuinfo" />
+          <option value="pycparser" />
+          <option value="pyjwt" />
+          <option value="pyparsing" />
+          <option value="python-dateutil" />
+          <option value="pytz" />
+          <option value="pyyaml" />
+          <option value="requests" />
+          <option value="requests-file" />
+          <option value="requests-toolbelt" />
+          <option value="scipy" />
+          <option value="seaborn" />
+          <option value="six" />
+          <option value="sympy" />
+          <option value="thop" />
+          <option value="torch" />
+          <option value="torchvision" />
+          <option value="tqdm" />
+          <option value="typing-extensions" />
+          <option value="tzdata" />
+          <option value="tzlocal" />
+          <option value="ultralytics" />
+          <option value="urllib3" />
+          <option value="zeep" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pandas-stubs==2.3.2.250926" />
+          <option value="boto3-stubs[full]==1.40.52" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="langgraph.checkpoint.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

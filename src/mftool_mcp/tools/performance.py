@@ -4,10 +4,12 @@ Returns 1Y/3Y/5Y returns for open-ended schemes.
 """
 
 from mftool import Mftool
+from mftool_mcp.mcp_instance import mcp
 
 _mf = Mftool()
 
 
+@mcp.tool()
 def get_equity_scheme_performance() -> dict:
     """
     Get daily performance data for all open-ended EQUITY mutual fund schemes.
@@ -26,6 +28,7 @@ def get_equity_scheme_performance() -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_debt_scheme_performance() -> dict:
     """
     Get daily performance data for all open-ended DEBT mutual fund schemes.
@@ -44,6 +47,7 @@ def get_debt_scheme_performance() -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_hybrid_scheme_performance() -> dict:
     """
     Get daily performance data for all open-ended HYBRID mutual fund schemes.
@@ -62,6 +66,7 @@ def get_hybrid_scheme_performance() -> dict:
         return {"error": str(e)}
 
 
+@mcp.tool()
 def get_elss_scheme_performance() -> dict:
     """
     Get daily performance data for ELSS (Equity Linked Savings Scheme) mutual funds.
