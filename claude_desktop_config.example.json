@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mftool-mcp": {
+      "command": "uvx",
+      "args": ["mftool-mcp"]
+    }
+  }
+}

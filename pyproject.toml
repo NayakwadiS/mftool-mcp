@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mftool-mcp"
+version = "0.1.0"
+description = "MCP Server for real-time Indian Mutual Funds data"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "SujitN", email = "your@email.com" }]
+keywords = [
+    "mcp",
+    "mutual-funds",
+    "india",
+    "amfi",
+    "nav",
+    "finance",
+    "llm",
+    "claude",
+    "model-context-protocol",
+    "mftool",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "mftool>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mftool-mcp"
+Repository = "https://github.com/yourusername/mftool-mcp"
+Issues = "https://github.com/yourusername/mftool-mcp/issues"
+
+[project.scripts]
+mftool-mcp = "mftool_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mftool_mcp"]
