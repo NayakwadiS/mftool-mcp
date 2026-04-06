@@ -131,7 +131,7 @@ pip install -e ".[dev]"
 python -m mftool_mcp.server
 ```
 
-### Project Structure
+<!-- ### Project Structure
 
 ```
 mftool-mcp/
@@ -167,7 +167,7 @@ To list this on [modelcontextprotocol.io](https://modelcontextprotocol.io):
 
 1. Fork `github.com/modelcontextprotocol/servers`
 2. Add entry under `README.md` → Community Servers section
-3. Open a PR with your server details
+3. Open a PR with your server details -->
 
 ---
 
