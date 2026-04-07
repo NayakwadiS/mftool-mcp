@@ -148,17 +148,6 @@ mftool-mcp/
 ├── LICENSE
 └── README.md
 ```
-
----
-
-## Publishing to PyPI
-
-```bash
-pip install build twine
-python -m build
-twine upload dist/*
-```
-
 ---
 
 ## Submitting to Official MCP Registry
@@ -168,12 +157,6 @@ To list this on [modelcontextprotocol.io](https://modelcontextprotocol.io):
 1. Fork `github.com/modelcontextprotocol/servers`
 2. Add entry under `README.md` → Community Servers section
 3. Open a PR with your server details -->
-
----
-
-## License
-
-MIT © 2025 Sujit Nayakwadi
 
 ---
 
