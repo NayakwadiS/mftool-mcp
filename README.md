@@ -3,7 +3,7 @@
 > **MCP Server for real-time Indian Mutual Funds data**  
 > Powered by [mftool](https://github.com/NayakwadiS/mftool) · AMFI data · Works with Claude, Cursor, and any MCP-compatible LLM client
 
-[![PyPI version](https://img.shields.io/pypi/v/mftool-mcp.svg)](https://pypi.org/project/mftool-mcp/)
+[![PyPI](https://img.shields.io/badge/pypi-v0.1.0-orange)](https://pypi.org/project/mftool-mcp/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MCP](https://img.shields.io/badge/MCP-compatible-green.svg)](https://modelcontextprotocol.io)
