@@ -1,8 +1,8 @@
 <!-- mcp-name: io.github.NayakwadiS/mftool-mcp -->
 # 🇮🇳 mftool-mcp
 
-> **MCP Server for real-time Indian Mutual Funds data**  
-> Powered by [mftool](https://github.com/NayakwadiS/mftool) · AMFI data · Works with Claude, Cursor, and any MCP-compatible LLM client
+> **MCP Server for publicly available Indian Mutual Funds data**  
+> Powered by [mftool](https://github.com/NayakwadiS/mftool) · Works with Claude, Cursor, and any MCP-compatible LLM client
 
 [![PyPI](https://img.shields.io/badge/pypi-v0.1.0-orange)](https://pypi.org/project/mftool-mcp/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -117,14 +117,14 @@ In your MCP client settings, add:
 
 ## Data Source
 
-All data is sourced from **AMFI India** (amfiindia.com) via the `mftool` library. Data accuracy depends on AMFI's published figures. This tool is for **informational purposes only** and does not constitute financial advice.
+All data is sourced via the `mftool` library. Data accuracy depends on AMFI's published figures. This tool is for **informational purposes only** and does not constitute financial advice.
 
 ---
 
 ## Development
 
 ```bash
-git clone https://github.com/yourusername/mftool-mcp
+git clone https://github.com/NayakwadiS/mftool-mcp
 cd mftool-mcp
 pip install -e ".[dev]"
 
@@ -149,15 +149,7 @@ mftool-mcp/
 ├── LICENSE
 └── README.md
 ```
----
-
-## Submitting to Official MCP Registry
-
-To list this on [modelcontextprotocol.io](https://modelcontextprotocol.io):
-
-1. Fork `github.com/modelcontextprotocol/servers`
-2. Add entry under `README.md` → Community Servers section
-3. Open a PR with your server details -->
+-->
 
 ---
 
