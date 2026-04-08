@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mftool-mcp"
-version = "0.1.0"
-description = "MCP Server for real-time Indian Mutual Funds data"
+version = "0.2.0"
+description = "MCP Server for publicly available Indian Mutual Funds data"
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "SujitN", email = "nayakwadi.sujit@rediffmail.com" }]

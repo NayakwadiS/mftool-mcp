@@ -2,7 +2,7 @@
   "mcpServers": {
     "mftool-mcp": {
       "command": "python",
-      "args": ["C:\\Drive D\\AI\\mftool-mcp\\server.py"],
+      "args": ["-m", "mftool_mcp.server"],
       "description": "Indian Mutual Fund data via mftool"
     }
   }
