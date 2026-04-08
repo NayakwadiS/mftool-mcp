@@ -1,3 +1,4 @@
+<!-- mcp-name: io.github.NayakwadiS/mftool-mcp -->
 # 🇮🇳 mftool-mcp
 
 > **MCP Server for real-time Indian Mutual Funds data**  
