@@ -13,7 +13,7 @@
 
 ## What is this?
 
-`mftool-mcp` is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that gives any LLM client access to **live Indian Mutual Fund data** from AMFI (Association of Mutual Funds in India).
+`mftool-mcp` is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that gives any LLM client access to **Indian Mutual Fund data**.
 
 Ask your AI assistant questions like:
 - *"What is the current NAV of SBI Bluechip Direct Growth?"*
@@ -117,7 +117,7 @@ In your MCP client settings, add:
 
 ## Data Source
 
-All data is sourced via the `mftool` library. Data accuracy depends on AMFI's published figures. This tool is for **informational purposes only** and does not constitute financial advice.
+All data is sourced via the `mftool` library. Data accuracy depends on published figures. This tool is for **informational purposes only** and does not constitute financial advice.
 
 ---
 
@@ -155,4 +155,4 @@ mftool-mcp/
 
 ## Acknowledgements
 
-- [mftool](https://github.com/NayakwadiS/mftool) by NayakwadiS — the underlying data library
+- [mftool](https://github.com/NayakwadiS/mftool) — the underlying data library
