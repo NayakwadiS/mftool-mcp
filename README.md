@@ -155,8 +155,8 @@ mftool-mcp/
 
 ## Acknowledgements
 
-- [mftool](https://github.com/NayakwadiS/mftool) — the underlying data library\
+- [mftool](https://github.com/NayakwadiS/mftool) — the underlying data library
 
 ## Associated Initiatives
 
-NSE Stock predictions *[NSE-Neuron](https://github.com/NayakwadiS/NSE-Neuron)*
+- NSE Stock predictions *[NSE-Neuron](https://github.com/NayakwadiS/NSE-Neuron)*
