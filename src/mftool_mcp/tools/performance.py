@@ -67,32 +67,38 @@ def get_hybrid_scheme_performance() -> dict:
 
 
 @mcp.tool()
-def get_elss_scheme_performance() -> dict:
+def get_solution_scheme_performance() -> dict:
     """
-    Get daily performance data for ELSS (Equity Linked Savings Scheme) mutual funds.
-    ELSS funds offer tax benefits under Section 80C with a 3-year lock-in period.
+    Get daily performance data for open-ended SOLUTION-ORIENTED mutual fund schemes.
+    Includes Retirement Fund and Children's Fund categories.
     Shows latest NAV (Regular & Direct plans) and 1Y/3Y/5Y returns.
 
     Returns:
-        Dictionary with ELSS fund performance metrics.
+        Dictionary categorized by solution-oriented fund type with performance metrics.
     """
     try:
-        result = _mf.get_open_ended_equity_scheme_performance(as_json=False)
+        result = _mf.get_open_ended_solution_scheme_performance(as_json=False)
         if not result:
-            return {"error": "Could not fetch ELSS scheme performance data."}
+            return {"error": "Could not fetch solution-oriented scheme performance data."}
+        return result
+    except Exception as e:
+        return {"error": str(e)}
 
-        # Filter only ELSS category
-        elss_data = {}
-        for category, funds in result.items():
-            if "elss" in category.lower() or "tax" in category.lower():
-                elss_data[category] = funds
 
-        if not elss_data:
-            return {
-                "info": "ELSS data not found as separate category. Returning all equity data.",
-                "data": result,
-            }
+@mcp.tool()
+def get_other_scheme_performance() -> dict:
+    """
+    Get daily performance data for open-ended OTHER mutual fund schemes.
+    Includes Index Funds and Fund of Funds (FoF) categories.
+    Shows latest NAV (Regular & Direct plans) and 1Y/3Y/5Y returns.
 
-        return elss_data
+    Returns:
+        Dictionary categorized by index/FoF fund type with performance metrics.
+    """
+    try:
+        result = _mf.get_open_ended_other_scheme_performance(as_json=False)
+        if not result:
+            return {"error": "Could not fetch other (index/FoF) scheme performance data."}
+        return result
     except Exception as e:
         return {"error": str(e)}
