@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mftool-mcp"
-version = "0.2.0"
+version = "0.3.0"
 description = "MCP Server for publicly available Indian Mutual Funds data"
 readme = "README.md"
 license = { text = "MIT" }
@@ -20,6 +20,8 @@ keywords = [
     "claude",
     "model-context-protocol",
     "mftool",
+    "nse",
+    "share-market",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -35,7 +37,7 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=1.0.0",
-    "mftool>=3.2",
+    "mftool>=3.3",
 ]
 
 [project.urls]

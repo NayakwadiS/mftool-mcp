@@ -107,3 +107,38 @@ def get_scheme_history(
     except Exception as e:
         return {"error": str(e)}
 
+
+@mcp.tool()
+def get_scheme_historical_nav_for_dates(
+    scheme_code: str,
+    start_date: str,
+    end_date: str,
+) -> dict:
+    """
+    Get historical NAV data for a mutual fund scheme within a specific date range.
+    Uses AMFI scheme codes. Dates must be in DD-MM-YYYY format.
+
+    Args:
+        scheme_code: AMFI numeric scheme code (e.g., '119597').
+        start_date: Start date in 'DD-MM-YYYY' format (e.g., '01-01-2023').
+        end_date: End date in 'DD-MM-YYYY' format (e.g., '31-12-2023').
+
+    Returns:
+        Dictionary with fund metadata and a 'data' list of {date, nav} entries
+        filtered to the requested date range.
+    """
+    try:
+        result = _mf.get_scheme_historical_nav_for_dates(
+            scheme_code, start_date, end_date, as_json=False
+        )
+        if not result:
+            return {
+                "error": (
+                    f"No data found for scheme code: {scheme_code} "
+                    f"between {start_date} and {end_date}. "
+                    "Ensure dates are in DD-MM-YYYY format and the scheme code is valid."
+                )
+            }
+        return result
+    except Exception as e:
+        return {"error": str(e)}

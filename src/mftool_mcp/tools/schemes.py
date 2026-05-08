@@ -202,21 +202,21 @@ def search_schemes_by_type(scheme_type: str, query: str = "", limit: int = 10) -
 @mcp.tool()
 def get_average_aum(year_quarter: str) -> dict:
     """
-    Get Average AUM (Assets Under Management) data for all fund houses for a given quarter.
+    Get the Average Assets Under Management (AAUM) for all AMCs for a given quarter.
+    Returns both domestic and overseas AAUM for each fund house.
 
     Args:
-        year_quarter: Quarter string in format 'Month - Month YYYY'.
-                      Examples: 'July - September 2024', 'April - June 2024',
-                                'January - March 2024'.
+        year_quarter: Quarter string in the format 'Month - Month YYYY'.
+                      Examples: 'April - June 2023', 'July - September 2023',
+                                'October - December 2023', 'January - March 2024'.
 
     Returns:
-        List of dicts with 'Fund Name', 'AAUM Overseas', and 'AAUM Domestic' for each AMC.
+        List of dicts with 'Fund Name', 'AAUM Domestic', and 'AAUM Overseas' for each AMC.
     """
     try:
         result = _mf.get_average_aum(year_quarter, as_json=False)
         if not result:
-            return {"error": f"No AUM data found for quarter: '{year_quarter}'."}
-        return {"year_quarter": year_quarter, "data": result}
+            return {"error": f"No AUM data found for quarter: '{year_quarter}'. Use format like 'April - June 2023'."}
+        return {"quarter": year_quarter, "data": result}
     except Exception as e:
         return {"error": str(e)}
-

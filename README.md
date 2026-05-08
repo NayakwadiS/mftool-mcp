@@ -27,18 +27,30 @@ Ask your AI assistant questions like:
 
 | Tool | Description |
 |---|---|
-| `get_scheme_quote` | Live NAV for any scheme by code |
-| `get_scheme_details` | Fund house, type, category, start date |
-| `get_scheme_historical_nav` | Full NAV history (all dates) |
-| `get_scheme_historical_nav_for_dates` | NAV history within a date range |
+| `get_scheme_quote` | Live NAV for any scheme by AMFI scheme code |
+| `get_bulk_quotes` | Live NAV for multiple schemes at once (concurrent) |
+| `get_scheme_historical_nav` | Full NAV history for a scheme (all available dates) |
+| `get_scheme_historical_nav_for_dates` | NAV history filtered to a specific date range (DD-MM-YYYY) |
+| `get_scheme_history` | NAV history via BSE/YFinance code with period or date range |
 | `get_scheme_codes` | All AMFI scheme codes and names |
 | `get_available_schemes` | All schemes under a specific AMC |
-| `is_valid_scheme_code` | Validate a scheme code |
-| `search_scheme_by_name` | Find scheme codes by keyword |
-| `get_equity_scheme_performance` | Daily equity fund performance (1Y/3Y/5Y) |
-| `get_debt_scheme_performance` | Daily debt fund performance |
-| `get_hybrid_scheme_performance` | Daily hybrid fund performance |
-| `get_elss_scheme_performance` | ELSS / tax-saving fund performance |
+| `get_scheme_details` | Fund house, type, category, start date (AMFI code) |
+| `get_scheme_info` | Rich scheme info — AUM, returns, ratings (BSE/YFinance code) |
+| `is_valid_scheme_code` | Validate an AMFI numeric scheme code |
+| `is_valid_new_scheme_code` | Validate a BSE/new format scheme code |
+| `search_schemes` | Search schemes by name keyword with relevance ranking |
+| `search_schemes_by_amc` | Search schemes within a specific AMC |
+| `search_schemes_by_type` | Search schemes by type/category (equity, debt, elss, etc.) |
+| `get_average_aum` | Average AUM (domestic & overseas) for all AMCs by quarter |
+| `get_equity_scheme_performance` | Daily performance for all equity funds (1Y/3Y/5Y returns) |
+| `get_debt_scheme_performance` | Daily performance for all debt funds (1Y/3Y/5Y returns) |
+| `get_hybrid_scheme_performance` | Daily performance for all hybrid funds (1Y/3Y/5Y returns) |
+| `get_solution_scheme_performance` | Daily performance for solution-oriented funds (retirement, children) |
+| `get_other_scheme_performance` | Daily performance for index funds and Fund of Funds |
+| `calculate_returns` | Calculate SIP returns — absolute return % and annualised IRR |
+| `get_cache_stats` | View hit/miss stats for NAV and scheme code caches |
+| `clear_cache` | Clear all cached data to force fresh fetches |
+| `set_cache_enabled` | Enable or disable mftool caching globally |
 
 ---
 
@@ -100,7 +112,7 @@ In your MCP client settings, add:
 
 **Finding a fund:**
 > You: "Find all SBI midcap mutual fund scheme codes"  
-> Claude: *calls `search_scheme_by_name(query='midcap', amc_name='sbi')`*  
+> Claude: *calls `search_schemes_by_amc(amc_name='sbi', query='midcap')`*  
 > Claude: "Here are the SBI midcap schemes: SBI Magnum Midcap Fund - Direct Growth (code: 125497)..."
 
 **Live NAV:**
