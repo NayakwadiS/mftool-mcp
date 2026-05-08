@@ -9,6 +9,8 @@ from mftool_mcp.mcp_instance import mcp
 import mftool_mcp.tools.nav  # noqa: F401
 import mftool_mcp.tools.schemes  # noqa: F401
 import mftool_mcp.tools.performance  # noqa: F401
+import mftool_mcp.tools.calculations  # noqa: F401
+import mftool_mcp.tools.cache  # noqa: F401
 
 
 def main():
