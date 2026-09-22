@@ -4,7 +4,7 @@
 > **MCP Server for publicly available Indian Mutual Funds data**  
 > Powered by [mftool](https://github.com/NayakwadiS/mftool) · Works with Claude, Cursor, and any MCP-compatible LLM client
 
-[![PyPI](https://img.shields.io/badge/pypi-v0.3.0-orange)](https://pypi.org/project/mftool-mcp/)
+[![PyPI](https://img.shields.io/badge/pypi-v0.4.0-orange)](https://pypi.org/project/mftool-mcp/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MCP](https://img.shields.io/badge/MCP-compatible-green.svg)](https://modelcontextprotocol.io)
@@ -48,6 +48,8 @@ Ask your AI assistant questions like:
 | `get_solution_scheme_performance` | Daily performance for solution-oriented funds (retirement, children) |
 | `get_other_scheme_performance` | Daily performance for index funds and Fund of Funds |
 | `calculate_returns` | Calculate SIP returns — absolute return % and annualised IRR |
+| `calculate_balance_units_value` | Current market value of held units for a scheme |
+| `calculate_portfolio_value` | Total current value of a multi-scheme portfolio (concurrent) |
 | `get_cache_stats` | View hit/miss stats for NAV and scheme code caches |
 | `clear_cache` | Clear all cached data to force fresh fetches |
 | `set_cache_enabled` | Enable or disable mftool caching globally |
@@ -143,6 +145,8 @@ pip install -e ".[dev]"
 # Run the server locally
 python -m mftool_mcp.server
 ```
+
+See [PUBLISHING.md](./PUBLISHING.md) for the full release process (PyPI + MCP Registry).
 
 <!-- ### Project Structure
 
