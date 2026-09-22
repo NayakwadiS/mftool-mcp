@@ -146,6 +146,8 @@ pip install -e ".[dev]"
 python -m mftool_mcp.server
 ```
 
+See [PUBLISHING.md](./PUBLISHING.md) for the full release process (PyPI + MCP Registry).
+
 <!-- ### Project Structure
 
 ```
