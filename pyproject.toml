@@ -37,7 +37,7 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=1.0.0",
-    "mftool>=3.3",
+    "mftool>=3.4",
 ]
 
 [project.urls]

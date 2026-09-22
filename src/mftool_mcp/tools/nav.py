@@ -31,20 +31,23 @@ def get_scheme_quote(scheme_code: str) -> dict:
 
 
 @mcp.tool()
-def get_bulk_quotes(scheme_codes: list) -> dict:
+def get_bulk_quotes(scheme_codes: list, max_workers: int = 10) -> dict:
     """
     Fetch the latest NAV quotes for multiple mutual fund schemes concurrently.
     Much faster than calling get_scheme_quote one-by-one for portfolios.
 
     Args:
         scheme_codes: List of AMFI numeric scheme codes (e.g., ['119597', '119062']).
+        max_workers: Maximum number of concurrent threads used to fetch quotes
+                     (default: 10). Increase for large portfolios, decrease if
+                     you hit rate limits.
 
     Returns:
         Dictionary with scheme codes as keys and quote data dicts as values.
         Invalid or unavailable codes will have null values.
     """
     try:
-        result = _mf.get_bulk_quotes(scheme_codes, as_json=False)
+        result = _mf.get_bulk_quotes(scheme_codes, as_json=False, max_workers=max_workers)
         if not result:
             return {"error": "Could not fetch bulk quotes."}
         return result
