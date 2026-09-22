@@ -40,3 +40,8 @@ Thumbs.db
 # Distribution
 dist/
 build/
+
+# MCP Registry auth tokens (sensitive)
+.mcpregistry_github_token
+.mcpregistry_registry_token
+
